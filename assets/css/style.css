@@ -1,0 +1,326 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;/* هاي ضفناها مشان ما يتأثر شي من العناصر الي بتكون ماخذة قيم افتراضية */
+}
+@font-face {
+    font-family: test;
+    src: url(../webfonts/fa-brands-400.eot);
+}
+.container{
+width: 80%;
+margin: auto;
+}
+.navbar .container{
+   
+    overflow: auto; /* هاي مشان نحل مشكلة الفلوت */
+}
+html{
+    /* هون عرفنا فاريبيل مشان نستخدمو اكثر من مرة يكون اسهل للاستخدام */
+    --secColor:rgba(255,255,255,0.7);
+    --mainColor:#f4623a;
+}
+
+.navbar{
+    position: fixed ; /* هاد مشان الناف بار يكون ثابت  */
+    width: 100%;
+    margin-top: 16px; /*وهون مشان العناصر ما تكون ملزقة فوق*/
+    
+}
+.logo{
+float: left;
+width: 35%;
+color:var(--secColor); /* هون عملنا اللون بس عن طريق الفاريابيل*/
+font-size: 30px;
+text-transform: capitalize;
+}
+.nav .list{
+    /* هون مشان نشيل الديزاين تبع ال يو أل */
+    list-style: none;
+}
+.list-item{
+    /* هون مشان يصيرن على شكل خط  */
+    display: inline-block;
+}
+.nav{
+    float: left;
+    width: 65%;
+    text-align: right;
+    font-size: 20px;
+    text-align: center;
+ 
+}
+.link-nav{
+    color:var(--secColor);
+    text-transform: capitalize;
+    text-decoration: none; /* هون مشان نشيل الخط من تحت العناصر*/
+    padding-right: 15px;
+   
+}
+@media (max-width: 576px) { 
+    .logo{
+      width: 100%;
+      text-align: center;
+      padding-bottom: 8px;
+    }
+    .nav{
+        width: 100%;
+    }
+    }
+.header-content{
+height: 100vh;
+background-image: url(../img/bg-masthead.jpg);
+background-position: 0 -130px;
+background-size: cover;
+}
+.header-content-items{
+    text-align: center;
+    padding-top: 250px;
+}
+.main-title{
+    color: white;
+    font-size: 60px;
+    text-transform: capitalize;
+    width: 54%;
+    margin: auto;
+
+}
+.line{
+background-color: var(--mainColor);
+width: 56px;
+height: 4px;
+/* مشان يظهر لازم اعملو بلوك لأنو كلاس السبان بكون ان لاين فبظهرش مع الارتفاع والعرض */
+display: block;   
+margin: 25px auto;
+}
+.main-description{
+    color: var(--secColor);
+    font-size: 20px;
+width: 46%;
+margin: auto;
+}
+@media (max-width: 576px) { 
+    .header-content-items{
+        padding-top: 120px;
+    }
+    .main-title{
+        width: 80%;
+        padding-top: 70px;
+        font-size: 50px;
+    }
+    .main-description{
+font-size: 22px;
+width: 80%;
+padding-bottom: 80px;
+    }
+
+   
+    }
+.link{
+    text-decoration: none;
+    color: white;
+  padding: 22px 30px;
+    display: block;
+    background-color: var(--mainColor);
+    width: fit-content;
+    margin: 30px auto;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.header .overlay{
+    background:linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../assets/img/bg-masthead.jpg");
+    height: 100%;
+}
+/* end header */
+.about{
+    background-color: var(--mainColor);
+    text-align: center;
+    padding-bottom: 86px;
+}
+.about-heading{
+    color: white;
+    padding-top: 90px;
+    font-size: 30px;
+}
+.about-description{
+color:     rgba(255, 255, 255, 0.75) ;
+font-size: 20px;
+text-align: center;
+margin: auto;
+width: 54%;
+}
+.about .line{
+    background-color: white;
+}
+.about .link{
+    background-color: white;
+    color: black;
+}
+/* end about */
+.services{
+    text-align: center;
+   
+    padding-top: 120px;
+}
+.services-heading{
+    text-transform: capitalize;
+    font-size: 30px;
+
+ 
+}
+.services-items{
+    overflow: auto;
+    margin-top: 80px;
+}
+.service-item{
+    width: 25%;
+    float: left;
+}
+.service-item .fas {
+font-size: 35px;
+padding-bottom: 20px;
+color: var(--mainColor);
+}
+.service-item .far{
+    color: var(--mainColor);
+    padding-bottom: 20px;
+    font-size: 35px;
+}
+.service-he3{
+    font-size: 25px;
+    text-transform: capitalize;
+}
+.service-description{
+    font-size: 20px;
+    color: #6c757d;
+    padding-top: 10px ;
+    width: 90%;
+    margin: auto;
+}
+/* end services section */
+.portfolio{
+    padding-top: 130px;
+    
+}
+.portfolio img{
+    display: block;
+}
+.portfolio .portfolio-item{
+    float: left;
+    width: 33.33%;
+}
+.portfolio-items{
+    overflow: hidden;
+}
+.portfolio-item{
+    position: relative;
+}
+.portfolio .overlay{
+    position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+    background-color: var(--mainColor) ;
+    opacity: 0;
+}
+.overlay-content{
+    text-align: center;
+    color: red;
+    padding-top: 140px;
+}
+.portfolio-main{
+    color: var(--secColor);
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.portfolio-second{
+color: #fff;
+font-size: 20px;
+text-transform: capitalize;
+}
+.portfolio-item:hover .overlay{
+    opacity: .8;
+}
+@media (max-width: 576px)    {
+    .portfolio .portfolio-item{
+        width: 100%;
+        
+    }
+}
+/* end portfolio */
+.download{
+  padding-top: 100px;
+    background-color:#323a40;
+    text-align: center;
+    padding-bottom: 100px;
+}
+.free-download{
+    text-transform: capitalize;
+
+}
+.download .link{
+    background-color: white;
+    color: black;
+    text-transform: uppercase;
+    
+}
+/* end download */
+.contact{
+    padding-top: 100px;
+    text-align: center;
+    overflow: auto;
+}
+.contact-description{
+    color: #6c757d;
+    padding-bottom: 10px;
+    font-size: 20px;
+    width: 45%;
+    margin: auto;
+
+}
+
+.contact-itam{
+    width: 50%;
+    float: left;
+}
+.contact-itam .fas{
+    display: block;
+    padding-bottom: 18px;
+    font-size: 50px;
+    color: #323a40;
+}
+.contact-span1{
+    font-size: 16px;
+}
+.contact-span2{
+    font-size: 16px;
+    color: var(--mainColor);
+}
+/* end contact */
+.footer{
+    padding-top: 100px;
+    margin-top: 200px;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 10px;
+    background-color: #f8f9fa;
+    color: #6c757d;
+}
+
+
+/* // Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... } */
